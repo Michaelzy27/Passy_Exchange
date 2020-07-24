@@ -55,8 +55,10 @@
         android:drawableStart="@drawable/ic_baseline_person_outline_24"
         android:drawablePadding="5dp"
         android:textColorHint="#04ABFB"
+        android:textColor="#000"
         android:inputType="text"/>
     <EditText
+        android:textColor="#000"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="0dp"
@@ -71,6 +73,7 @@
         android:textColorHint="#04ABFB"/>
 
     <EditText
+        android:textColor="#000"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="0dp"
@@ -85,6 +88,7 @@
         android:drawablePadding="5dp"/>
 
     <EditText
+        android:textColor="#000"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="0dp"
@@ -112,9 +116,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:layout_marginStart="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
+            android:textColor="@android:color/black"
             android:text="@string/already_have_acc"/>
         <TextView
             android:layout_width="wrap_content"
