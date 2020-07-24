@@ -55,6 +55,8 @@
             android:textColorHint="#04ABFB"/>
         <TextView
             android:paddingBottom="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="0dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/forgot"
@@ -87,7 +89,7 @@
             android:id="@+id/remember_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:shadowColor="#10507A"
+            android:buttonTint="#10507A"
             android:layout_marginStart="16dp"/>
 
         <TextView
@@ -125,7 +127,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sign_up"
-            android:layout_marginStart="7dp"
+            android:layout_marginStart="5dp"
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="#04ABFB"/>
