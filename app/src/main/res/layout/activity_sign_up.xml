@@ -116,6 +116,9 @@
                 android:textColor="@android:color/black"
                 android:text="@string/already_have_acc"/>
             <TextView
+                android:id="@+id/go_to_login"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/login"

@@ -25,6 +25,7 @@ public class Splashscreen extends AppCompatActivity {
             @Override
             public void run() {
                 Toast.makeText(Splashscreen.this, "Splashscreen done", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Splashscreen.this, LoginActivity.class));
             }
         }, 3000);
 

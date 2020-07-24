@@ -10,4 +10,9 @@
     <string name="sign_up">Sign Up</string>
     <string name="already_have_acc">Already have an account?</string>
     <string name="login">Login</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="log_into_account">Log into \n your account</string>
+    <string name="username_email">Username/Email</string>
+    <string name="remember">Remember me</string>
+    <string name="forgot">Forgot?</string>
 </resources>
