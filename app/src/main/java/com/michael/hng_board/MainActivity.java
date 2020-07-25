@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.michael.hng_board.ui.UserPost.UserPostFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     private String[] mNavigationDrawerItemTitles;
@@ -83,13 +85,13 @@ public class MainActivity extends AppCompatActivity {
 
         switch (position) {
             case 0:
-                fragment = new TestFragment();
+                fragment = new HomeFragment();
                 break;
             case 1:
-                fragment = new TestFragment();
+                fragment = new TaskFragment();
                 break;
             case 2:
-                fragment = new TestFragment();
+                fragment = new UserPostFragment();
                 break;
             case 3:
                 fragment = new TestFragment();

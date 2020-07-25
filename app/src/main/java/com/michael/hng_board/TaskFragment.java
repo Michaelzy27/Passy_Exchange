@@ -10,32 +10,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.michael.hng_board.homepage.Task;
-import com.michael.hng_board.homepage.TaskAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
+ * Use the {@link TaskFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class TaskFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    RecyclerView taskRecycler;
-    TaskAdapter taskAdapter;
-    List<Task> tasks = new ArrayList<>();
+    private RecyclerView recyclerview;
+    private LinearLayoutManager layoutManager;
+    private AllTaskActivityRecyclerviewAdapter adapter;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public HomeFragment() {
+    public TaskFragment() {
         // Required empty public constructor
     }
 
@@ -45,11 +39,11 @@ public class HomeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
+     * @return A new instance of fragment TaskFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static TaskFragment newInstance(String param1, String param2) {
+        TaskFragment fragment = new TaskFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -70,30 +64,19 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        View root = (inflater.inflate(R.layout.fragment_task, container, false));
 
-        taskRecycler = view.findViewById(R.id.tasks_recycler);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL,
-                false);
-        taskRecycler.setLayoutManager(layoutManager);
-        taskAdapter = new TaskAdapter(tasks);
-        taskRecycler.setAdapter(taskAdapter);
+        recyclerview = root.findViewById(R.id.all_task_recyclerview);
+        layoutManager = new LinearLayoutManager(this.getContext());
+        adapter = new AllTaskActivityRecyclerviewAdapter();
 
-        prepareTasks();
+        recyclerview.setAdapter(adapter);
+        recyclerview.setLayoutManager(layoutManager);
 
-        return view;
+        adapter.addTask(new AllTaskTestDataClass("Stage 2 Entry Task: Hotel Website", "04/06/20", "13:45 PM"));
+        adapter.addTask(new AllTaskTestDataClass("Task 0.5: Git", "09/07/20", "20:16 PM"));
+        adapter.addTask(new AllTaskTestDataClass("Task 0.5: Lucid", "23/07/20", "01:13 AM"));
 
-    }
-    private void prepareTasks() {
-        Task
-                task = new Task("Stage 2 entry Task: Hotel website design","Deadline: 31/07/2020 12:00 AM",
-                "Design","pending",R.drawable.ic_baseline_arrow_forward_ios_24);
-        tasks.add(task);
-        task = new Task("Task 0.5: Git","Deadline: 07/06/2020 12:00 AM",
-                "General","closed",R.drawable.ic_baseline_arrow_forward_ios_24);
-        tasks.add(task);
-        task = new Task("Task 0.5: Lucid","Deadline: 07/06/2020 12:00 AM",
-                "General","closed",R.drawable.ic_baseline_arrow_forward_ios_24);
-        tasks.add(task);
+        return root;
     }
 }
