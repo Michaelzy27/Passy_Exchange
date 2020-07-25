@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">HNG Board</string>
+    <string name="app_name">HNG-board</string>
+    <string name="new_string">new</string>
     <string name="icon">[ ]</string>
     <string name="get_started">Get Started</string>
     <string name="username">Username</string>
@@ -10,6 +11,9 @@
     <string name="sign_up">Sign Up</string>
     <string name="already_have_acc">Already have an account?</string>
     <string name="login">Login</string>
+    <string name="all_task">All Task</string>
+    <string name="user_task">User Task</string>
+
     <string name="dont_have_account">Don\'t have an account?</string>
     <string name="log_into_account">Log into \n your account</string>
     <string name="username_email">Username/Email</string>
@@ -30,6 +34,9 @@
 
     <string name="stage8">Stage 8 Entry Task: HNG Website Redesign</string>
     <string name="_1_sign_in_user">1.Sign in User</string>
+    <string name="hng_board_1"> HNG Board</string>
+    <string name="c_2020_">C 2020 </string>
+    <string name="post">Post</string>
 
     <string-array name="countries" formatted="false" translatable="false">
         <item>Afghanistan</item>
