@@ -10,6 +10,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="already_have_acc">Already have an account?</string>
     <string name="login">Login</string>
+    <string name="all_task">All Task</string>
 
     <string-array name="countries" formatted="false" translatable="false">
         <item>Afghanistan</item>
@@ -239,7 +240,6 @@
         <item>Zimbabwe</item>
         <item>Åland Islands</item>
     </string-array>
-
 
 
 </resources>
