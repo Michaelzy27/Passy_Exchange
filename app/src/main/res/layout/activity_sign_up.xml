@@ -37,6 +37,7 @@
         </LinearLayout>
 
         <EditText
+            android:id="@+id/username"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="0dp"
@@ -51,6 +52,7 @@
             android:textColor="#000"
             android:inputType="text"/>
         <EditText
+            android:id="@+id/email"
             android:textColor="#000"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
@@ -66,6 +68,7 @@
             android:textColorHint="#04ABFB"/>
 
         <EditText
+            android:id="@+id/password"
             android:textColor="#000"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
@@ -81,6 +84,7 @@
             android:drawablePadding="5dp"/>
 
         <EditText
+            android:id="@+id/confirm_password"
             android:textColor="#000"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
@@ -144,6 +148,7 @@
             android:inputType="textPersonName" />
 
         <Button
+            android:id="@+id/sign_up"
             android:layout_margin="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -164,6 +169,9 @@
                 android:textColor="@android:color/black"
                 android:text="@string/already_have_acc"/>
             <TextView
+                android:id="@+id/go_to_login"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/login"
