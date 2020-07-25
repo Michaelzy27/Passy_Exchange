@@ -35,7 +35,7 @@
             android:name=".SignUpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".Splashscreen" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>

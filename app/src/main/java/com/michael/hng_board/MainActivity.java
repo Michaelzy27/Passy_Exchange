@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mDrawerList = findViewById(R.id.left_drawer);
 
-//        loadFragment(new TestFragment(),0);
+//        HomeFragment home = new HomeFragment();
+//        loadFragment(home,0);
 
         setupToolbar();
 
