@@ -11,7 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".homepage.Home_activity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
 <!--            <intent-filter>-->
@@ -21,6 +20,8 @@
 <!--            </intent-filter>-->
         </activity>
 
+        <activity android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".userTask"></activity>
         <activity android:name=".UserProfileActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
         <activity android:name=".OnboardingScreen" android:theme="@style/Theme.AppCompat.NoActionBar"/>
