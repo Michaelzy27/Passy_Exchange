@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     TextView logIn;
     EditText Username, Email, Password, Track, FirstName, LastNmae, Location;
+    Button SignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class SignUpActivity extends AppCompatActivity {
         FirstName = findViewById(R.id.first_name);
         LastNmae = findViewById(R.id.last_name);
         Location = findViewById(R.id.location);
+        SignUp = findViewById(R.id.sign_up);
 
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
