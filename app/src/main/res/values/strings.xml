@@ -10,6 +10,8 @@
     <string name="sign_up">Sign Up</string>
     <string name="already_have_acc">Already have an account?</string>
     <string name="login">Login</string>
+    <string name="stage8">Stage 8 Entry Task: HNG Website Redesign</string>
+    <string name="_1_sign_in_user">1.Sign in User</string>
 
     <string-array name="countries" formatted="false" translatable="false">
         <item>Afghanistan</item>
@@ -239,7 +241,6 @@
         <item>Zimbabwe</item>
         <item>Åland Islands</item>
     </string-array>
-
 
 
 </resources>
