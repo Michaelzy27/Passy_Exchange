@@ -15,4 +15,16 @@
     <string name="username_email">Username/Email</string>
     <string name="remember">Remember me</string>
     <string name="forgot">Forgot?</string>
+    <string name="profile_img">Profile Image</string>
+    <string name="hello_frank">Hello Frank!</string>
+    <string name="franklyn">Franklyn B. Epidi</string>
+    <string name="internship_id">INTERNSHIP ID: HNG-05406</string>
+    <string-array name="navigation_drawer_items_array">
+        <item>Dashboard</item>
+        <item>Task</item>
+        <item>Post</item>
+        <item>Calendar</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
