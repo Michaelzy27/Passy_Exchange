@@ -7,4 +7,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="spinnerColor" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:textColor">#10507A</item>
+    </style>
+
 </resources>
