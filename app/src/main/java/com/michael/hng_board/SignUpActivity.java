@@ -108,51 +108,11 @@ public class SignUpActivity extends AppCompatActivity {
                 String result = response.body().string();
                 Log.i("responseBody", result);
                 Intent i = new Intent(getApplicationContext(), LoginActivity.class);
-                if(response.isSuccessful()){
-                   // showToast("Successful Login");
-                  //  startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                   // finish();
-                   // String result = response.body().string();
-                    Log.i("loginResponse", "yes");
-                   // Log.i("responseBody", result);
-                    //Log.i("resultResponsee", result);
+                startActivity(i);
 
-                  /*  JSONObject jsonObject = new JSONObject(result);
-                    String resultData = jsonObject.getString("data");    //gets the data array in string format from the response body
-
-                    JSONObject jsonObject1 = new JSONObject(resultData);
-                    String resultToken = jsonObject1.getString("token");  //gets the token string from the data array
-                    helper.token(resultToken);   //sends token to the helper class to be used through out the app
-
-                    SharedPreferences sharedPreferences = getSharedPreferences("TOKEN", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("token", resultToken);
-                    editor.apply();
-
-                    Log.d("TOKEN", resultToken);
-
-                    if(!response.isSuccessful()){
-
-                        Toast.makeText(LoginActivity.this,"Email or Password Mismatch",Toast.LENGTH_SHORT).show();
-                    }*/
-                }else{
-                    Log.i("loginResponse", "Unsuccessful");
-                }
             }catch (Exception e){
                 e.printStackTrace();
             }
-          /*  try {
-                Response response = okHttpClient.newCall(request).execute();
-
-                if (response.isSuccessful()){
-
-                    String responseBody = response.body().string();
-                    Log.i("response", responseBody);
-
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }*/
 
             return null;
         }

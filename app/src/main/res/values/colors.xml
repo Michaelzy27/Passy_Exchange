@@ -12,13 +12,6 @@
     <color name="text_color">#04172a</color>
     <color name="text_topic">#4C4C4C</color>
     <color name="colorSkyWhite">#C3BEBE</color>
-
-    <color name="colorText">#04172A</color>
-    <color name="background">#E5E5E5</color>
-    <color name="text_color">#04172a</color>
-    <color name="text_topic">#4C4C4C</color>
-    <color name="colorWhite">#FFFFFF</color>
-
     <color name="colorText">#04172A</color>
     
 </resources>
