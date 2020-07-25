@@ -3,18 +3,10 @@ package com.michael.hng_board;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.michael.hng_board.homepage.Task;
-import com.michael.hng_board.homepage.TaskAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,10 +19,6 @@ public class HomeFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
-    RecyclerView taskRecycler;
-    TaskAdapter taskAdapter;
-    List<Task> tasks = new ArrayList<>();
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -71,15 +59,8 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = (R.layout.fragment_home)
         return inflater.inflate(R.layout.fragment_home, container, false);
 
-        taskRecycler = view.findViewById(R.id.tasks_recycler);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL,
-                false);
-        taskRecycler.setLayoutManager(layoutManager);
-        taskAdapter = new TaskAdapter(tasks);
-        taskRecycler.setAdapter(taskAdapter);
 
     }
 }
