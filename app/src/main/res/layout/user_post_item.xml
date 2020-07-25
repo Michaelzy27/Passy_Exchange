@@ -10,7 +10,7 @@
     android:orientation="vertical">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/notification_image"
+        android:id="@+id/post_profile_image"
         android:layout_width="55dp"
         android:layout_height="55dp"
         android:background="@drawable/circlelar_backgroud"
@@ -26,7 +26,7 @@
         android:layout_marginStart="10dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/notification_image"
+        app:layout_constraintStart_toEndOf="@+id/post_profile_image"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/notification_title"
+                android:id="@+id/post_profile_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="John Doe"
@@ -57,12 +57,12 @@
                 android:textAllCaps="false"
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/notification_title"
+                app:layout_constraintStart_toEndOf="@id/post_profile_name"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/notification_describtion"
+            android:id="@+id/post_theme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Introduction to UI/UX Design"
@@ -76,16 +76,14 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/post_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:autoSizeTextType="uniform"
         android:text="Welcome to HNG, here you will receive our basic notifications on important updates and things you wish to follow throughout HNG.  Welcom"
         android:textColor="@color/colorBlack"
-        android:textFontWeight="10"
         android:textIsSelectable="true"
-        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,6 +109,6 @@
         android:text="Read more..."
         android:textColor="@color/colorOrange"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/post_description" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
