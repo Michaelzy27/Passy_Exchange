@@ -1,6 +1,8 @@
 package com.michael.hng_board;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
@@ -22,7 +24,8 @@ public class Splashscreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(Splashscreen.this, "Splashscreen done", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Splashscreen.this, OnboardingScreen.class);
+                startActivity(intent);
             }
         }, 3000);
 
