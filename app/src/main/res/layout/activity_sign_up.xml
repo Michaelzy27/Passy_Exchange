@@ -95,6 +95,54 @@
             android:drawablePadding="5dp"
             android:textColorHint="#04ABFB"/>
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="First Name"
+            android:textColorHint="#04ABFB"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="Last name"
+            android:textColorHint="#04ABFB"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="Track"
+            android:textColorHint="#04ABFB"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="Location"
+            android:textColorHint="#04ABFB"
+            android:inputType="textPersonName" />
+
         <Button
             android:layout_margin="16dp"
             android:layout_width="match_parent"
