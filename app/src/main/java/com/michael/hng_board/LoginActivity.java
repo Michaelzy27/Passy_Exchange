@@ -11,13 +11,12 @@ import android.widget.TextView;
 public class LoginActivity extends AppCompatActivity {
 
     TextView signIn;
+    TextView Email, Password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        signIn = findViewById(R.id.go_to_signin);
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
