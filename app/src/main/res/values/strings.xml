@@ -19,6 +19,9 @@
     <string name="forgot">Forgot?</string>
     <string name="stage8">Stage 8 Entry Task: HNG Website Redesign</string>
     <string name="_1_sign_in_user">1.Sign in User</string>
+    <string name="hng_board_1"> HNG Board</string>
+    <string name="c_2020_">C 2020 </string>
+    <string name="post">Post</string>
 
     <string-array name="countries" formatted="false" translatable="false">
         <item>Afghanistan</item>
