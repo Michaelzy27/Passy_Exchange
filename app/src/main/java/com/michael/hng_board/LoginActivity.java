@@ -10,8 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.michael.hng_board.Utils.Helper;
 import com.michael.hng_board.homepage.Home_activity;
+
+import org.json.JSONObject;
 
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
@@ -21,6 +25,8 @@ import okhttp3.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
+    Helper helper;
+
     TextView signIn;
     EditText Username, Password;
 
@@ -28,6 +34,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        helper = new Helper(this);
 
         Username = findViewById(R.id.login_email_username);
         Password = findViewById(R.id.login_password);
@@ -50,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Login login = new Login();
         login.execute(username,password);
+        helper.progressDialogStart("Logging in", "Please wait while we log you in");
 
     }
 
@@ -78,8 +87,18 @@ public class LoginActivity extends AppCompatActivity {
                 Log.i("hhh", "hhh0");
                 String result = response.body().string();
                 Log.i("responseBody", result);
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
+                JSONObject jsonObject = new JSONObject(result);
+                String resultData = jsonObject.getString("status");
+                if (resultData.equalsIgnoreCase("success")){
+
+                    helper.progressDialogEnd();
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(i);
+
+                }else {
+                    helper.progressDialogEnd();
+                    showToast("Login failed! Check login details");
+                }
 
             }catch (Exception e){
                 e.printStackTrace();
@@ -87,5 +106,14 @@ public class LoginActivity extends AppCompatActivity {
 
             return null;
         }
+    }
+
+    public void showToast(final String Text){
+        this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                Toast.makeText(LoginActivity.this, Text, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

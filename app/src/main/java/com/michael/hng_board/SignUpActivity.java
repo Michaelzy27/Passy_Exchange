@@ -77,8 +77,8 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Please enter a Username", Toast.LENGTH_SHORT).show();
                 }else if (email.isEmpty()){
                     Toast.makeText(SignUpActivity.this, "Please enter an email", Toast.LENGTH_SHORT).show();
-                }else if (password.isEmpty()){
-                    Toast.makeText(SignUpActivity.this, "Please enter a password greater than 8 characters", Toast.LENGTH_SHORT).show();
+                }else if (password.isEmpty() && password.length() < 8){
+                    Toast.makeText(SignUpActivity.this, "Please enter a password greater or equal to 8 characters", Toast.LENGTH_SHORT).show();
                 }else if (track.isEmpty()){
                     Toast.makeText(SignUpActivity.this, "Please select a track", Toast.LENGTH_SHORT).show();
                 }else if (firstName.isEmpty()){
