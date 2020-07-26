@@ -38,6 +38,14 @@
     <string name="c_2020_">C 2020 </string>
     <string name="post">Post</string>
 
+    <string-array name="tracks">
+        <item>Mobile</item>
+        <item>Frontend</item>
+        <item>Backend</item>
+        <item>Design</item>
+        <item>Dev Ops</item>
+    </string-array>
+
     <string-array name="countries" formatted="false" translatable="false">
         <item>Afghanistan</item>
         <item>Albania</item>
