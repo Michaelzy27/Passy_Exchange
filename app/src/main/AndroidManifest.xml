@@ -3,6 +3,7 @@
 
     xmlns:tools="http://schemas.android.com/tools"
     package="com.michael.hng_board">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -33,7 +34,8 @@
         <activity
             android:name=".SignUpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".Splashscreen" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>

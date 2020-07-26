@@ -8,11 +8,13 @@
     <color name="strokeColor">#10507A</color>
     <color name="colorOrange">#FF9501</color>
 
+    <color name="colorWhite">#FFFFFF</color>
+
     <color name="background">#E5E5E5</color>
     <color name="text_color">#04172a</color>
     <color name="text_topic">#4C4C4C</color>
-    <color name="colorWhite">#FFFFFF</color>
-
+    <color name="colorSkyWhite">#C3BEBE</color>
+>>>>>>> 5a0bfd8dfb5f16362cbd575f34f5b97433ea560b
     <color name="colorText">#04172A</color>
     
 </resources>
