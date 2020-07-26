@@ -46,7 +46,8 @@
           android:text="Get Started"
           android:textAllCaps="false"
           android:textColor="#fff"
-          android:textStyle="bold"/>
+          android:textStyle="bold"
+          android:id="@+id/btngetStarted"/>
 
       <Button
           android:layout_width="300dp"
@@ -58,8 +59,8 @@
           android:textColor="#04FBFB"
           android:textStyle="bold"
           android:textAllCaps="false"
-          android:layout_marginBottom="30dp"/>
-
+          android:layout_marginBottom="30dp"
+          android:id="@+id/btnLogin"/>
    </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

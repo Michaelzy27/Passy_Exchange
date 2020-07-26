@@ -3,6 +3,7 @@
 
     xmlns:tools="http://schemas.android.com/tools"
     package="com.michael.hng_board">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AllTaskActivity"/>
+        <activity
+            android:name=".UserProfileActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".OnboardingScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".homepage.Home_activity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
 <!--            <intent-filter>-->
@@ -23,16 +31,13 @@
         <activity android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".userTask"></activity>
-        <activity android:name=".UserProfileActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".OnboardingScreen" android:theme="@style/Theme.AppCompat.NoActionBar"/>
-
         <activity
             android:name=".SignUpActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name=".Splashscreen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:name=".Splashscreen" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

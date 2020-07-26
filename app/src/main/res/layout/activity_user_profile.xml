@@ -238,7 +238,7 @@
                     android:textStyle="bold"
                     android:layout_marginTop="20dp"/>
 
-                <TextView
+                <EditText
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/edtBio"
@@ -249,7 +249,8 @@
                     android:layout_marginStart="10dp"
                     android:textSize="15sp"
                     android:textColor="#10507A"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+                    android:textColorHint="#10507A"
+                    android:hint="Please Enter Your Bio"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

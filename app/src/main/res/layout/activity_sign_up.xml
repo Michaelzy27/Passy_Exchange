@@ -100,62 +100,74 @@
             android:textColorHint="#04ABFB"/>
 
         <EditText
+            android:id="@+id/first_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/ic_baseline_person_outline_24"
+            android:drawablePadding="5dp"
             android:ems="10"
             android:hint="First Name"
-            android:textColorHint="#04ABFB"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColorHint="#04ABFB" />
 
         <EditText
+            android:id="@+id/last_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/ic_baseline_person_outline_24"
+            android:drawablePadding="5dp"
             android:ems="10"
             android:hint="Last name"
-            android:textColorHint="#04ABFB"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColorHint="#04ABFB" />
 
         <EditText
+            android:id="@+id/track"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/ic_baseline_person_outline_24"
+            android:drawablePadding="5dp"
             android:ems="10"
             android:hint="Track"
-            android:textColorHint="#04ABFB"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColorHint="#04ABFB" />
 
         <EditText
+            android:id="@+id/location"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:layout_marginTop="0dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:drawableStart="@drawable/ic_baseline_person_outline_24"
+            android:drawablePadding="5dp"
             android:ems="10"
             android:hint="Location"
-            android:textColorHint="#04ABFB"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColorHint="#04ABFB" />
 
         <Button
             android:id="@+id/sign_up"
-            android:layout_margin="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             android:background="@drawable/sign_up_border"
             android:text="@string/sign_up"
             android:textColor="#fff"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_margin="16dp"
