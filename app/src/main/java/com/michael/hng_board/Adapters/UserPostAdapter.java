@@ -1,6 +1,7 @@
 package com.michael.hng_board.Adapters;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -28,6 +29,20 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.ViewHo
         this.userPostList = userPostList;
     }
 
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        public TextView name, title, description, time;
+        public CircleImageView circleImage;
+
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            title = itemView.findViewById(R.id.post_theme);
+            description = itemView.findViewById(R.id.post_description);
+            time = itemView.findViewById(R.id.post_time);
+            name = itemView.findViewById(R.id.post_profile_name);
+            circleImage = itemView.findViewById(R.id.post_profile_image);
+        }
+    }
+
     /**
      * Called when RecyclerView needs a new {@link ViewHolder} of the given type to represent
      * an item.
@@ -51,7 +66,8 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(context).inflate(R.layout.user_post_item, parent, false);
+        return new ViewHolder(view);
     }
 
     /**
@@ -76,7 +92,16 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.ViewHo
      */
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        UserPostModel postModel = userPostList.get(position);
+        holder.name.setText(postModel.getPostName());
+        holder.time.setText(postModel.getPostTime());
+        holder.title.setText(postModel.getPostTitle());
+        holder.description.setText(postModel.getPostDescription());
+        if(postModel.getPostTitle().equals("default")){
+            holder.circleImage.setImageResource(R.drawable.user_post_icon_foreground);
+        }else{
+            // TODO load image from image link using gide
+        }
     }
 
     /**
@@ -87,19 +112,5 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.ViewHo
     @Override
     public int getItemCount() {
         return 0;
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView name, title, description, date;
-        public CircleImageView circleImage;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            title = itemView.findViewById(R.id.notification_title);
-            description = itemView.findViewById(R.id.notification_describtion);
-            date = itemView.findViewById(R.id.notification_date);
-            name = itemView.findViewById(R.id.new_notification);
-            circleImage = itemView.findViewById(R.id.notification_image);
-        }
     }
 }
