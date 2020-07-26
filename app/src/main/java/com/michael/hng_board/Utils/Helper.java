@@ -46,7 +46,7 @@ public class Helper {
         notificationList.add(notificationModel);
 
         String s2 = "Welcome to HNG once more, we hope you getting prepared for out first upcoming task";
-        notificationModel = new NotificationModel("Set Up for Our First Task", s1, "default", "25 July", true);
+        notificationModel = new NotificationModel("Set Up for Our First Task", s2, "default", "25 July", true);
         notificationList.add(notificationModel);
         notificationList.add(notificationModel);
 

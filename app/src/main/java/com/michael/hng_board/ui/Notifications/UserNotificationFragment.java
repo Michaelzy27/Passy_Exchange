@@ -34,7 +34,7 @@ public class UserNotificationFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View root =  inflater.inflate(R.layout.user_notification_fragment, container, false);
-        helper = new Helper();
+        helper = new Helper(getContext());
 
         recyclerView = root.findViewById(R.id.notification_recyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
