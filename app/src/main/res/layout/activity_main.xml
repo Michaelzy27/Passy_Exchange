@@ -83,7 +83,12 @@
         <TextView
             android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_outline_exit_to_app_24"
+            android:text="Logout?"/>
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>
