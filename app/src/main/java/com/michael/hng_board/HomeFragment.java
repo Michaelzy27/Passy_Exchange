@@ -73,8 +73,7 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         taskRecycler = view.findViewById(R.id.tasks_recycler);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL,
-                false);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL, false);
         taskRecycler.setLayoutManager(layoutManager);
         taskAdapter = new TaskAdapter(tasks);
         taskRecycler.setAdapter(taskAdapter);

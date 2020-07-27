@@ -17,8 +17,12 @@ import android.view.ViewGroup;
 
 import com.michael.hng_board.Adapters.NotificationAdapter;
 import com.michael.hng_board.Adapters.UserPostAdapter;
+import com.michael.hng_board.Models.UserPostModel;
 import com.michael.hng_board.R;
 import com.michael.hng_board.Utils.Helper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserPostFragment extends Fragment {
 
@@ -37,10 +41,10 @@ public class UserPostFragment extends Fragment {
         View root = inflater.inflate(R.layout.user_post_fragment, container, false);
         helper = new Helper(getContext());
 
-        recyclerView = root.findViewById(R.id.notification_recyclerView);
+        recyclerView = root.findViewById(R.id.post_recyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
-        userPostAdapter = new UserPostAdapter(getContext(), helper.userPostLocalData());
+        userPostAdapter = new UserPostAdapter(getContext(), userPostLocalData());
         recyclerView.setAdapter(userPostAdapter);
 
 
@@ -53,6 +57,19 @@ public class UserPostFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(UserPostViewModel.class);
         // TODO: Use the ViewModel
+
+    }
+
+    public List<UserPostModel> userPostLocalData(){
+        List<UserPostModel> userPostListData = new ArrayList<>();
+
+        String s2 = "Hello, I am John Doe, happy to be here";
+        UserPostModel userPostModel = new UserPostModel("default", "John Doe", "25min", "Introduction", "Hello, I am John Doe, happy to be here");
+        userPostListData.add(userPostModel);
+        userPostListData.add(userPostModel);
+        userPostListData.add(userPostModel);
+
+        return userPostListData;
     }
 
 }

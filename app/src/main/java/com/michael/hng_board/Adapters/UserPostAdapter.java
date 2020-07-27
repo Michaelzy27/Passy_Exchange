@@ -22,7 +22,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.ViewHolder>{
     private Context context;
     private List<UserPostModel> userPostList;
-    private Helper helper;
+    private Helper helper = new Helper();
 
     public UserPostAdapter(Context context, List<UserPostModel> userPostList) {
         this.context = context;
@@ -66,7 +66,7 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.user_post_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_post_item, parent, false);
         return new ViewHolder(view);
     }
 
@@ -97,7 +97,7 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.ViewHo
         holder.time.setText(postModel.getPostTime());
         holder.title.setText(postModel.getPostTitle());
         holder.description.setText(postModel.getPostDescription());
-        if(postModel.getPostTitle().equals("default")){
+        if(postModel.getPostImage().equals("default")){
             holder.circleImage.setImageResource(R.drawable.user_post_icon_foreground);
         }else{
             // TODO load image from image link using gide
