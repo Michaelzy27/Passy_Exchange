@@ -36,10 +36,10 @@
                 android:text="Welcome Franklin,"
                 android:textColor="#334669"
                 android:textSize="28sp"
-                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/stage_card"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/stage_card"
@@ -52,7 +52,7 @@
                 app:cardElevation="4dp"
                 app:layout_constraintEnd_toStartOf="@+id/track"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/welcome_text"
                 android:gravity="center_horizontal"
                 >
