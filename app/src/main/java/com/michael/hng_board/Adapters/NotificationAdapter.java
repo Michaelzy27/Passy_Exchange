@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -31,7 +32,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView title, description, date, recent;
-        public CircleImageView circleImage;
+        public ImageView circleImage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -115,7 +116,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
      */
     @Override
     public int getItemCount() {
-        return 0;
+        return notificationList.size();
     }
 
 }
