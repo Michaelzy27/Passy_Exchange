@@ -32,9 +32,9 @@ public class SignUpActivity extends AppCompatActivity {
     Helper helper;
 
     TextView logIn;
-    EditText Username, Email, Password, FirstName, LastNmae, Locationn;
+    EditText Username, Email, Password, FirstName, LastNmae;
     Button SignUp;
-    Spinner Track;
+    Spinner Track, Locationn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +71,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String track = Track.toString();
                 String firstName = FirstName.getText().toString();
                 String lastName = LastNmae.getText().toString();
-                String location = Locationn.getText().toString();
+                String location = Locationn.toString();
 
                 if (username.isEmpty()){
                     Toast.makeText(SignUpActivity.this, "Please enter a Username", Toast.LENGTH_SHORT).show();
