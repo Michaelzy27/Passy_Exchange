@@ -6,12 +6,15 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.michael.hng_board.ui.Notifications.UserNotificationFragment;
 import com.michael.hng_board.ui.UserPost.UserPostFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,8 +36,14 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mDrawerList = findViewById(R.id.left_drawer);
 
-//        HomeFragment home = new HomeFragment();
-//        loadFragment(home,0);
+        toolbar = findViewById(R.id.toolbar);
+        ImageView bell = toolbar.findViewById(R.id.not_bell);
+        bell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new UserNotificationFragment(),4);
+            }
+        });
 
         setupToolbar();
 
@@ -53,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         setupDrawerToggle();
+
+        selectItem(0);
     }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -125,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void setupToolbar(){
-        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }

@@ -78,7 +78,7 @@ public class LoginActivity extends AppCompatActivity {
                 Log.i("hhh", "hhh0");
                 String result = response.body().string();
                 Log.i("responseBody", result);
-                Intent i = new Intent(LoginActivity.this, Home_activity.class);
+                Intent i = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(i);
 
             }catch (Exception e){
