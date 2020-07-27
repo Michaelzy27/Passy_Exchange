@@ -9,7 +9,7 @@
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/notification_image"
         android:layout_width="75dp"
         android:layout_height="75dp"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="Welcome to HNG"
                 android:textAllCaps="false"
-                android:textColor="@color/colorBlack"
+                android:textColor="#000"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
