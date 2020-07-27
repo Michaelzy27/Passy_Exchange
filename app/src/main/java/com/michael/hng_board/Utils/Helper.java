@@ -5,6 +5,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.michael.hng_board.Models.NotificationModel;
+import com.michael.hng_board.Models.UserPostModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +41,21 @@ public class Helper {
 
     public List<NotificationModel> notificationLocalData(){
         List<NotificationModel> notificationList = new ArrayList<>();
+
+        String s1 = "Welcome to HNG, here you will receive our basic notifications on important updates and things you wish to follow throughout HNG.  Welcom";
+        notificationModel = new NotificationModel("Welcome to HNG", s1, "default", "25 July", false);
+        notificationList.add(notificationModel);
+
+        String s2 = "Welcome to HNG once more, we hope you getting prepared for out first upcoming task";
+        notificationModel = new NotificationModel("Set Up for Our First Task", s2, "default", "25 July", true);
+        notificationList.add(notificationModel);
+        notificationList.add(notificationModel);
+
+        return notificationList;
+    }
+
+    public List<UserPostModel> userPostLocalData(){
+        List<UserPostModel> userPostListData = new ArrayList<>();
 
         String s1 = "Welcome to HNG, here you will receive our basic notifications on important updates and things you wish to follow throughout HNG.  Welcom";
         notificationModel = new NotificationModel("Welcome to HNG", s1, "default", "25 July", false);
