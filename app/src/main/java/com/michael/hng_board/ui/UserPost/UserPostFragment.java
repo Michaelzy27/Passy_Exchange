@@ -42,7 +42,7 @@ public class UserPostFragment extends Fragment {
         helper = new Helper(getContext());
 
         recyclerView = root.findViewById(R.id.post_recyclerView);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager  layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
         userPostAdapter = new UserPostAdapter(getContext(), userPostLocalData());
         recyclerView.setAdapter(userPostAdapter);

@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:background="?android:attr/activatedBackgroundIndicator"
     android:minHeight="?android:attr/listPreferredItemHeightSmall"
-    android:paddingTop="32dp"
-    android:paddingBottom="32dp">
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
 
     <ImageView
         android:id="@+id/imageViewIcon"
