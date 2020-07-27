@@ -36,18 +36,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/post_recyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Posts"
-            app:layout_constraintVertical_bias="0.0"
-            tools:itemCount="@android:integer/config_mediumAnimTime"
-            tools:listitem="@layout/user_post_item" />
+            app:layout_constraintTop_toBottomOf="@+id/Posts" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -57,6 +52,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginBottom="14dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -65,7 +61,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/c_2020_"
+            android:text="C 2020  "
             android:textColor="@color/colorBlack"
             android:textSize="14sp" />
 
@@ -79,7 +75,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hng_board_1"
+            android:text="  HNG Board"
             android:textColor="@color/colorBlack"
             android:textSize="14sp"/>
     </LinearLayout>
