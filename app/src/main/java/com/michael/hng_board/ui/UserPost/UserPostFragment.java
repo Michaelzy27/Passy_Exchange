@@ -40,7 +40,7 @@ public class UserPostFragment extends Fragment {
         recyclerView = root.findViewById(R.id.notification_recyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
-        userPostAdapter = new NotificationAdapter(getContext(), helper.notificationLocalData());
+        userPostAdapter = new UserPostAdapter(getContext(), helper.userPostLocalData());
         recyclerView.setAdapter(userPostAdapter);
 
 

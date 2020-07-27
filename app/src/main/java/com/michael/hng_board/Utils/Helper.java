@@ -57,15 +57,12 @@ public class Helper {
     public List<UserPostModel> userPostLocalData(){
         List<UserPostModel> userPostListData = new ArrayList<>();
 
-        String s1 = "Welcome to HNG, here you will receive our basic notifications on important updates and things you wish to follow throughout HNG.  Welcom";
-        notificationModel = new NotificationModel("Welcome to HNG", s1, "default", "25 July", false);
-        notificationList.add(notificationModel);
+        String s2 = "Hello, I am John Doe, happy to be here";
+        UserPostModel userPostModel = new UserPostModel("default", "John Doe", "25min", "Introduction", "Hello, I am John Doe, happy to be here");
+        userPostListData.add(userPostModel);
+        userPostListData.add(userPostModel);
+        userPostListData.add(userPostModel);
 
-        String s2 = "Welcome to HNG once more, we hope you getting prepared for out first upcoming task";
-        notificationModel = new NotificationModel("Set Up for Our First Task", s2, "default", "25 July", true);
-        notificationList.add(notificationModel);
-        notificationList.add(notificationModel);
-
-        return notificationList;
+        return userPostListData;
     }
 }
