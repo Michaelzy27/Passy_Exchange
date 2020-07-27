@@ -48,6 +48,7 @@
     </string-array>
 
     <string-array name="countries" formatted="false" translatable="false">
+        <item>Select your location</item>
         <item>Afghanistan</item>
         <item>Albania</item>
         <item>Algeria</item>
