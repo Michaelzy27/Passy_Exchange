@@ -112,6 +112,6 @@ public class UserPostAdapter extends RecyclerView.Adapter<UserPostAdapter.ViewHo
      */
     @Override
     public int getItemCount() {
-        return 0;
+        return userPostList.size();
     }
 }
