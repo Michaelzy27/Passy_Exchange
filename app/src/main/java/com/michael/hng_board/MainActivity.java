@@ -136,7 +136,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void setupToolbar(){
-
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
