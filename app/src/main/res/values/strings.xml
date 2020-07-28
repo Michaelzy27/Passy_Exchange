@@ -40,6 +40,7 @@
     <string name="post">Post</string>
 
     <string-array name="tracks">
+        <item>Select your track</item>
         <item>Mobile</item>
         <item>Frontend</item>
         <item>Backend</item>

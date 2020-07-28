@@ -68,7 +68,7 @@
             android:layout_gravity="center"
             android:textColor="#fff"
             android:text="@string/internship_id"
-            android:id="@+id/id_nav_bar"
+            android:id="@+id/hng_id_nav_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -80,15 +80,6 @@
             android:divider="#10507A"
             android:dividerHeight="0dp"/>
 
-        <TextView
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:textColor="#fff"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_marginTop="16dp"
-            android:drawableStart="@drawable/ic_outline_exit_to_app_24"
-            android:text="Logout?"/>
     </LinearLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

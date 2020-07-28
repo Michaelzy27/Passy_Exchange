@@ -6,16 +6,29 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.michael.hng_board.ui.Notifications.UserNotificationFragment;
 import com.michael.hng_board.ui.UserPost.UserPostFragment;
+
+import org.json.JSONObject;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
     ActionBarDrawerToggle mDrawerToggle;
+    String lastName, firstName;
+
+    TextView Greeting, UserName, HngId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
         mNavigationDrawerItemTitles= getResources().getStringArray(R.array.navigation_drawer_items_array);
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mDrawerList = findViewById(R.id.left_drawer);
+
+        Greeting = findViewById(R.id.hello_nav_bar);
+        UserName = findViewById(R.id.name_nav_bar);
+        HngId = findViewById(R.id.hng_id_nav_bar);
 
         toolbar = findViewById(R.id.toolbar);
         ImageView bell = toolbar.findViewById(R.id.not_bell);
@@ -47,12 +67,13 @@ public class MainActivity extends AppCompatActivity {
 
         setupToolbar();
 
-        NavItem[] drawerItem = new NavItem[4];
+        NavItem[] drawerItem = new NavItem[5];
 
         drawerItem[0] = new NavItem("Dashboard",R.drawable.dashboard);
-        drawerItem[1] = new NavItem("Task", R.drawable.task);
+        drawerItem[1] = new NavItem("Task", R.drawable.dashboard);
         drawerItem[2] = new NavItem("Post", R.drawable.post);
         drawerItem[3] = new NavItem("Calendar", R.drawable.post);
+        drawerItem[4] = new NavItem("Logout", R.drawable.ic_outline_exit_to_app_24);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getSupportActionBar().setHomeButtonEnabled(true);
 
@@ -64,6 +85,11 @@ public class MainActivity extends AppCompatActivity {
         setupDrawerToggle();
 
         selectItem(0);
+
+        //code to load the user details
+        getUserProfile getUserProfile = new getUserProfile();
+        getUserProfile.execute();
+
     }
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
@@ -107,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 3:
                 fragment = new TestFragment();
+            case 4:
+                Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(i);
             default:
                 break;
         }
@@ -145,4 +174,67 @@ public class MainActivity extends AppCompatActivity {
         //This is necessary to change the icon of the Drawer Toggle upon state change.
         mDrawerToggle.syncState();
     }
+
+    public class getUserProfile extends AsyncTask<String, Void, String>{
+
+        @Override
+        protected String doInBackground(String... strings) {
+
+            OkHttpClient okHttpClient = new OkHttpClient();
+
+            SharedPreferences sharedP = getApplicationContext().getSharedPreferences("TOKEN", Context.MODE_PRIVATE);
+            String token = sharedP.getString("token", "Token");
+            String userId = sharedP.getString("userId", "UserId");
+            String LasttName = "";
+            String aasttName = "";
+            String dataResult = "";
+            Log.i("token", token);
+            Log.i("userid", userId);
+
+            Request request = new Request.Builder()
+                    .url("https://hngboard.herokuapp.com/users/" + userId + "/profile")
+                    .header("Authorization", "Bearer "  + token )
+                    .build();
+
+            try {
+                Response response = okHttpClient.newCall(request).execute();
+                String responsebody = response.body().string();
+                Log.i("userRBody", responsebody);
+
+                JSONObject jsonObject = new JSONObject(responsebody);
+                dataResult = jsonObject.getString("data");
+
+
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+
+            return dataResult;
+        }
+
+        @Override
+        protected void onPostExecute(String dataResult) {
+
+            try {
+                JSONObject dataObject = new JSONObject(dataResult);
+                String LasttName = dataObject.getString("lastName");
+                String FirstName = dataObject.getString("firstName");
+                String HngID = dataObject.getString("hngId");
+
+                Greeting.setText("Hello " + LasttName);
+                UserName.setText(FirstName + " " + LasttName);
+                HngId.setText("INTERNSHIP ID: " + HngID);
+
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+
+            super.onPostExecute(dataResult);
+        }
+    }
+
 }
