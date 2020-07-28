@@ -33,7 +33,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/dm_sans_bold"
-                android:text="Welcome Franklin,"
+                android:text="Welcome ,"
                 android:textColor="#334669"
                 android:textSize="28sp"
                 app:layout_constraintEnd_toEndOf="parent"
