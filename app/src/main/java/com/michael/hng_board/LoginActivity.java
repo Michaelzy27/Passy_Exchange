@@ -102,6 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                     helper.progressDialogEnd();
                     Intent i = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(i);
+                    finish();
 
                     SharedPreferences sharedPreferences = getSharedPreferences("TOKEN", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();

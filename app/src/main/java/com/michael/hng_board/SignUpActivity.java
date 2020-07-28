@@ -73,20 +73,20 @@ public class SignUpActivity extends AppCompatActivity {
                 String lastName = LastNmae.getText().toString();
                 String location = Locationn.toString();
 
-                if (username.isEmpty()){
-                    Toast.makeText(SignUpActivity.this, "Please enter a Username", Toast.LENGTH_SHORT).show();
-                }else if (email.isEmpty()){
-                    Toast.makeText(SignUpActivity.this, "Please enter an email", Toast.LENGTH_SHORT).show();
+                if (username.isEmpty() && username.length() < 2){
+                    Toast.makeText(SignUpActivity.this, "Please enter a Username (more than 2 characters", Toast.LENGTH_SHORT).show();
+                }else if (email.isEmpty() && email.length() < 5){
+                    Toast.makeText(SignUpActivity.this, "Please enter a valid email", Toast.LENGTH_SHORT).show();
                 }else if (password.isEmpty() && password.length() < 8){
                     Toast.makeText(SignUpActivity.this, "Please enter a password greater or equal to 8 characters", Toast.LENGTH_SHORT).show();
-                }else if (track.isEmpty()){
+                }else if (track.equalsIgnoreCase("select your track")){
                     Toast.makeText(SignUpActivity.this, "Please select a track", Toast.LENGTH_SHORT).show();
                 }else if (firstName.isEmpty()){
                     Toast.makeText(SignUpActivity.this, "Please enter your First Name", Toast.LENGTH_SHORT).show();
                 }else if (lastName.isEmpty()){
                     Toast.makeText(SignUpActivity.this, "Please enter your Last Name", Toast.LENGTH_SHORT).show();
-                }else if (location.isEmpty()){
-                    Toast.makeText(SignUpActivity.this, "Please inout your location", Toast.LENGTH_SHORT).show();
+                }else if (location.equalsIgnoreCase("select your location")){
+                    Toast.makeText(SignUpActivity.this, "Please select a location", Toast.LENGTH_SHORT).show();
                 }else {
 
                     Signup signup = new Signup();

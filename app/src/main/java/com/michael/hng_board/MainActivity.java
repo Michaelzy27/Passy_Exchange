@@ -3,6 +3,7 @@ package com.michael.hng_board;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
@@ -13,12 +14,14 @@ import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.michael.hng_board.ui.Notifications.UserNotificationFragment;
 import com.michael.hng_board.ui.UserPost.UserPostFragment;
@@ -132,10 +135,11 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new UserPostFragment();
                 break;
             case 3:
-                fragment = new TestFragment();
+                Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
             case 4:
                 Intent i = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(i);
+                finish();
             default:
                 break;
         }
@@ -162,6 +166,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)){
+            mDrawerLayout.closeDrawer(GravityCompat.START);
+        }
     }
 
     void setupToolbar(){
