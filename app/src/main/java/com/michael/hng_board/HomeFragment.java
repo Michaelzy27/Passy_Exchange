@@ -1,20 +1,31 @@
 package com.michael.hng_board;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.michael.hng_board.homepage.Task;
 import com.michael.hng_board.homepage.TaskAdapter;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,6 +41,7 @@ public class HomeFragment extends Fragment {
     RecyclerView taskRecycler;
     TaskAdapter taskAdapter;
     List<Task> tasks = new ArrayList<>();
+    TextView WelcomeText;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -77,6 +89,10 @@ public class HomeFragment extends Fragment {
         taskRecycler.setLayoutManager(layoutManager);
         taskAdapter = new TaskAdapter(tasks);
         taskRecycler.setAdapter(taskAdapter);
+        WelcomeText = view.findViewById(R.id.welcome_text);
+
+        getUserProfile getUserProfile = new getUserProfile();
+        getUserProfile.execute();
 
         prepareTasks();
 
@@ -94,4 +110,69 @@ public class HomeFragment extends Fragment {
                 "General","closed",R.drawable.ic_baseline_arrow_forward_ios_24);
         tasks.add(task);
     }
+
+    public class getUserProfile extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... strings) {
+
+            OkHttpClient okHttpClient = new OkHttpClient();
+
+            SharedPreferences sharedP = getContext().getSharedPreferences("TOKEN", Context.MODE_PRIVATE);
+            String token = sharedP.getString("token", "Token");
+            String userId = sharedP.getString("userId", "UserId");
+            String LasttName = "";
+            String aasttName = "";
+            String dataResult = "";
+            Log.i("token", token);
+            Log.i("userid", userId);
+
+            Request request = new Request.Builder()
+                    .url("https://hngboard.herokuapp.com/users/" + userId + "/profile")
+                    .header("Authorization", "Bearer "  + token )
+                    .build();
+
+            try {
+                Response response = okHttpClient.newCall(request).execute();
+                String responsebody = response.body().string();
+                Log.i("userRBody", responsebody);
+
+                JSONObject jsonObject = new JSONObject(responsebody);
+                dataResult = jsonObject.getString("data");
+
+                JSONObject dataObject = new JSONObject(dataResult);
+                String LastName = dataObject.getString("lastName");
+
+               // SharedPreferences.Editor editor = sharedP.edit();
+               // editor.putString("lastName", LastName);
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+
+            return dataResult;
+        }
+
+        @Override
+        protected void onPostExecute(String dataResult) {
+
+            try {
+                JSONObject dataObject = new JSONObject(dataResult);
+                String LasttName = dataObject.getString("lastName");
+                String FirstName = dataObject.getString("firstName");
+                String HngID = dataObject.getString("hngId");
+
+                WelcomeText.setText("Welcome " + LasttName );
+
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+
+            super.onPostExecute(dataResult);
+        }
+    }
+
 }

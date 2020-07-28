@@ -204,7 +204,11 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject jsonObject = new JSONObject(responsebody);
                 dataResult = jsonObject.getString("data");
 
+                JSONObject dataObject = new JSONObject(dataResult);
+                String LastName = dataObject.getString("lastName");
 
+                SharedPreferences.Editor editor = sharedP.edit();
+                editor.putString("lastName", LastName);
 
             }catch (Exception e){
                 e.printStackTrace();
