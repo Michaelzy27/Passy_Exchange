@@ -32,7 +32,7 @@ public class SignUpActivity extends AppCompatActivity {
     Helper helper;
 
     TextView logIn;
-    EditText Username, Email, Password, FirstName, LastNmae;
+    EditText Username, Email, Password, ConfirmPassword, FirstName, LastNmae;
     Button SignUp;
     Spinner Track, Locationn;
 
@@ -47,6 +47,7 @@ public class SignUpActivity extends AppCompatActivity {
         Username = findViewById(R.id.username);
         Email = findViewById(R.id.email);
         Password = findViewById(R.id.password);
+        ConfirmPassword = findViewById(R.id.confirm_password);
         Track = findViewById(R.id.track);
         FirstName = findViewById(R.id.first_name);
         LastNmae = findViewById(R.id.last_name);
@@ -68,10 +69,12 @@ public class SignUpActivity extends AppCompatActivity {
                 String username = Username.getText().toString();
                 String email = Email.getText().toString();
                 String password = Password.getText().toString();
-                String track = Track.toString();
+                String confirmPassowrd = ConfirmPassword.getText().toString();
+                String track = Track.getSelectedItem().toString();
                 String firstName = FirstName.getText().toString();
                 String lastName = LastNmae.getText().toString();
-                String location = Locationn.toString();
+                String location = Locationn.getSelectedItem().toString();
+                Log.i("track", track);
 
                 if (username.isEmpty() && username.length() < 2){
                     Toast.makeText(SignUpActivity.this, "Please enter a Username (more than 2 characters", Toast.LENGTH_SHORT).show();
@@ -79,7 +82,9 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(SignUpActivity.this, "Please enter a valid email", Toast.LENGTH_SHORT).show();
                 }else if (password.isEmpty() && password.length() < 8){
                     Toast.makeText(SignUpActivity.this, "Please enter a password greater or equal to 8 characters", Toast.LENGTH_SHORT).show();
-                }else if (track.equalsIgnoreCase("select your track")){
+                }else if (!password.equals(confirmPassowrd)){
+                    Toast.makeText(SignUpActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                }else if (track.equalsIgnoreCase("Select your track")){
                     Toast.makeText(SignUpActivity.this, "Please select a track", Toast.LENGTH_SHORT).show();
                 }else if (firstName.isEmpty()){
                     Toast.makeText(SignUpActivity.this, "Please enter your First Name", Toast.LENGTH_SHORT).show();

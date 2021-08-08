@@ -54,13 +54,17 @@ public class LoginActivity extends AppCompatActivity {
 
     public void loginApi(View view) {
 
+        Intent i = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(i);
+        finish();
+
         String username = Username.getText().toString();
         String password = Password.getText().toString();
 
 
-        Login login = new Login();
-        login.execute(username,password);
-        helper.progressDialogStart("Logging in", "Please wait while we log you in");
+//        Login login = new Login();
+//        login.execute(username,password);
+//        helper.progressDialogStart("Logging in", "Please wait while we log you in");
 
     }
 

@@ -136,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 3:
                 Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
+                break;
             case 4:
                 Intent i = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(i);
