@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HNG-board</string>
+    <string name="app_name">Passy Exchange</string>
     <string name="new_string">new</string>
     <string name="icon">[ ]</string>
     <string name="get_started">Get Started</string>
@@ -39,13 +39,21 @@
     <string name="c_2020_">C 2020  </string>
     <string name="post">Post</string>
 
-    <string-array name="tracks">
-        <item>Select your track</item>
-        <item>Mobile</item>
-        <item>Frontend</item>
-        <item>Backend</item>
-        <item>Design</item>
-        <item>Dev Ops</item>
+    <string-array name="banks">
+        <item>Select Bank</item>
+        <item>First Bank</item>
+        <item>UBA</item>
+        <item>Ecobank</item>
+        <item>GTBank</item>
+        <item>Access Bank</item>
+        <item>Sterling Bank</item>
+        <item>Fidelity Bank</item>
+    </string-array>
+
+    <string-array name="selectCoin">
+        <item>Bitcoin</item>
+        <item>Ethereum</item>
+        <item>Ripple</item>
     </string-array>
 
     <string-array name="countries" formatted="false" translatable="false">

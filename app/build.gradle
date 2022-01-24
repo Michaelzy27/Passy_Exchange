@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.michael.hng_board"
+        applicationId "com.michael.passy_exchange"
         minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
