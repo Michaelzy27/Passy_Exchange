@@ -13,7 +13,7 @@ import java.util.List;
 public class Helper {
     ProgressDialog progressDialog;
     Context context;
-//    private NotificationModel notificationModel;
+    private NotificationModel notificationModel;
 
     public Helper(){
 
