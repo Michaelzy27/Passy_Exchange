@@ -39,9 +39,9 @@ public class PendingOrdersAdapter extends RecyclerView.Adapter<PendingOrdersAdap
     @Override
     public void onBindViewHolder(@NonNull PendingOrdersAdapter.ViewHolder holder, int position) {
 
-        holder.pending_order_address.setText("hahah test");
-        holder.pending_order_amount.setText("heheh okay");
-        holder.pending_order_type.setText("text test");
+        holder.pending_order_address.setText("Hahah test");
+        holder.pending_order_amount.setText("Heheh okay");
+        holder.pending_order_type.setText("Text test");
 
     }
 
