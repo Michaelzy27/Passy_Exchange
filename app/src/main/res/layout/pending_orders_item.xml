@@ -16,7 +16,7 @@
             android:padding="15dp">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/pending_order_type"
                 android:layout_width="103dp"
                 android:layout_height="33dp"
                 android:layout_marginTop="4dp"
@@ -38,10 +38,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.12"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                app:layout_constraintTop_toBottomOf="@+id/pending_order_type" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/pending_orders_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$200"
@@ -62,12 +62,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/pending_order_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0x000000"
                 android:textColor="@color/colorBlack"
-                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintStart_toStartOf="@+id/pending_orders_amount"
                 app:layout_constraintTop_toTopOf="@+id/textView10" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new TaskFragment();
                 break;
             case 2:
-                fragment = new UserPostFragment();
+                fragment = new PendingOrdersFragment();
                 break;
             case 3:
                 Toast.makeText(this, "Coming Soon!", Toast.LENGTH_SHORT).show();
