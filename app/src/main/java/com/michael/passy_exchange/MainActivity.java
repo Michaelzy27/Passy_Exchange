@@ -121,10 +121,10 @@ public class MainActivity extends AppCompatActivity {
 
         switch (position) {
             case 0:
-                fragment = new HomeFragment();
+                fragment = new BuyCoinsFragment();
                 break;
             case 1:
-                fragment = new TaskFragment();
+                fragment = new SellCoinsFragment();
                 break;
             case 2:
                 fragment = new PendingOrdersFragment();
