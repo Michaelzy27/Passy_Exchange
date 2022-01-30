@@ -63,7 +63,7 @@ public class TaskFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = (inflater.inflate(R.layout.fragment_ask, container, false));
+        View root = (inflater.inflate(R.layout.fragment_sell_coins, container, false));
 
         recyclerview = root.findViewById(R.id.all_task_recyclerview);
         layoutManager = new LinearLayoutManager(this.getContext());
