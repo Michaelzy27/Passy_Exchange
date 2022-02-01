@@ -63,7 +63,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner2"
+            app:layout_constraintTop_toBottomOf="@+id/bank_spinner"
             app:layout_constraintVertical_bias="0.114" />
 
         <Spinner
@@ -79,7 +79,7 @@
             app:layout_constraintVertical_bias="0.116" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/bank_spinner"
             android:layout_width="340dp"
             android:layout_height="40dp"
             android:background="@drawable/edit_text_bg"

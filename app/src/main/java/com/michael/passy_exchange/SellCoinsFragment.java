@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +25,7 @@ public class SellCoinsFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private RecyclerView recyclerview;
     private LinearLayoutManager layoutManager;
+    private Spinner bank;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -67,6 +70,8 @@ public class SellCoinsFragment extends Fragment {
 
         recyclerview = root.findViewById(R.id.all_task_recyclerview);
         layoutManager = new LinearLayoutManager(this.getContext());
+        bank = root.findViewById(R.id.bank_spinner);
+        Ada
 
 //        recyclerview.setAdapter(adapter);
 //        recyclerview.setLayoutManager(layoutManager);
