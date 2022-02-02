@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 
@@ -25,7 +26,7 @@ public class SellCoinsFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private RecyclerView recyclerview;
     private LinearLayoutManager layoutManager;
-    private Spinner bank;
+    private Spinner select_bank;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -70,8 +71,11 @@ public class SellCoinsFragment extends Fragment {
 
         recyclerview = root.findViewById(R.id.all_task_recyclerview);
         layoutManager = new LinearLayoutManager(this.getContext());
-        bank = root.findViewById(R.id.bank_spinner);
-        Ada
+        select_bank = root.findViewById(R.id.bank_spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.banks, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        adapter.set
+        select_bank.setAdapter(adapter);
 
 //        recyclerview.setAdapter(adapter);
 //        recyclerview.setLayoutManager(layoutManager);

@@ -83,7 +83,6 @@
             android:layout_width="340dp"
             android:layout_height="40dp"
             android:background="@drawable/edit_text_bg"
-            android:entries="@array/banks"
             android:paddingStart="7dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
