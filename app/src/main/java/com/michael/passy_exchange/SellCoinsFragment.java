@@ -74,7 +74,6 @@ public class SellCoinsFragment extends Fragment {
         select_bank = root.findViewById(R.id.bank_spinner);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.banks, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapter.set
         select_bank.setAdapter(adapter);
 
 //        recyclerview.setAdapter(adapter);
